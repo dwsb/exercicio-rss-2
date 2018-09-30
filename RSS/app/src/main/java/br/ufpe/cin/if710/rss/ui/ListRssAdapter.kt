@@ -1,4 +1,4 @@
-package br.ufpe.cin.if710.rss
+package br.ufpe.cin.if710.rss.ui
 
 import android.content.Context
 import android.content.Intent
@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import br.ufpe.cin.if710.rss.R
+import br.ufpe.cin.if710.rss.model.ItemRSS
 import kotlinx.android.synthetic.main.itemlista.view.*
 
 class ListRssAdapter(var rss :List<ItemRSS>, private val context: Context):

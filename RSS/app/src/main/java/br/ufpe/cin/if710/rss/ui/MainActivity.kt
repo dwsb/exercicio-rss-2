@@ -1,13 +1,14 @@
-package br.ufpe.cin.if710.rss
+package br.ufpe.cin.if710.rss.ui
 
 import android.app.Activity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.widget.LinearLayout
+import br.ufpe.cin.if710.rss.R
+import br.ufpe.cin.if710.rss.util.ParserRSS
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
-
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.io.InputStream
@@ -16,7 +17,7 @@ import java.net.URL
 
 class MainActivity : Activity() {
     var RSS_FEED:String = ""
-    private var listFeedAdapter = ListRssAdapter(emptyList(),this)
+    private var listFeedAdapter = ListRssAdapter(emptyList(), this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,7 +53,7 @@ class MainActivity : Activity() {
         try {
             val url = URL(feed)
             val conn = url.openConnection() as HttpURLConnection
-            inputStream = conn.getInputStream()
+            inputStream = conn.inputStream
             val out = ByteArrayOutputStream()
             val buffer = ByteArray(1024)
             var count: Int = inputStream.read(buffer)
