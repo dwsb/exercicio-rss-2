@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.PreferenceActivity"/>
+
+        <service android:name=".util.LoadFeed"/>
+        <receiver android:name=".util.SReceiver">
+            <intent-filter>
+                <action android:name="br.ufpe.cin.if710.rss.receiver.INSERTED_DATA"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

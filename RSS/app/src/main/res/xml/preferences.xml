@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="ListRSS">
+        <EditTextPreference
+            android:title="FEED URLS"
+            android:key="rss"
+            android:dialogMessage="Digit URL"
+            android:dialogTitle="Alter URL"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="Send">
+        </EditTextPreference>
+    </PreferenceCategory>
+</PreferenceScreen>
